@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <ul>
+        <% messages.forEach((message) => { %>
+          <!-- <li><%= message.text %> - <%= message.user %></li> -->
+          <%- include('message', {user: message.user, message: message.text}); %>
+        <% }); %>
+    </ul>
+    <!-- <%- messages %> -->
+  </body>
+</html>
