@@ -3,9 +3,9 @@
     <ul>
         <% messages.forEach((message) => { %>
           <!-- <li><%= message.text %> - <%= message.user %></li> -->
-          <%- include('message', {user: message.user, message: message.text}); %>
+          <%- include('message', {user: message.user, message: message.text, id: message.id}); %>
         <% }); %>
     </ul>
-    <!-- <%- messages %> -->
+    <a href="/new">Add a New Message</a>
   </body>
 </html>
